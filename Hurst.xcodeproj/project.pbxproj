@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843142F5197AF784006BA074 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843142F4197AF784006BA074 /* MapViewController.m */; };
+		843142F7197AF9A3006BA074 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843142F6197AF9A3006BA074 /* MapKit.framework */; };
 		843A76FA1978670F006988E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A76F91978670F006988E1 /* Foundation.framework */; };
 		843A76FC1978670F006988E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A76FB1978670F006988E1 /* CoreGraphics.framework */; };
 		843A76FE1978670F006988E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A76FD1978670F006988E1 /* UIKit.framework */; };
@@ -46,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843142F3197AF784006BA074 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		843142F4197AF784006BA074 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		843142F6197AF9A3006BA074 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		843A76F61978670F006988E1 /* Hurst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hurst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843A76F91978670F006988E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		843A76FB1978670F006988E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843142F7197AF9A3006BA074 /* MapKit.framework in Frameworks */,
 				843A76FC1978670F006988E1 /* CoreGraphics.framework in Frameworks */,
 				843A76FE1978670F006988E1 /* UIKit.framework in Frameworks */,
 				843A76FA1978670F006988E1 /* Foundation.framework in Frameworks */,
@@ -126,6 +132,7 @@
 		843A76F81978670F006988E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				843142F6197AF9A3006BA074 /* MapKit.framework */,
 				843A76F91978670F006988E1 /* Foundation.framework */,
 				843A76FB1978670F006988E1 /* CoreGraphics.framework */,
 				843A76FD1978670F006988E1 /* UIKit.framework */,
@@ -148,6 +155,8 @@
 				843A77151978670F006988E1 /* SecondViewController.m */,
 				843A77171978670F006988E1 /* Images.xcassets */,
 				843A77001978670F006988E1 /* Supporting Files */,
+				843142F3197AF784006BA074 /* MapViewController.h */,
+				843142F4197AF784006BA074 /* MapViewController.m */,
 			);
 			path = Hurst;
 			sourceTree = "<group>";
@@ -308,6 +317,7 @@
 			files = (
 				843A77161978670F006988E1 /* SecondViewController.m in Sources */,
 				843A770A1978670F006988E1 /* AppDelegate.m in Sources */,
+				843142F5197AF784006BA074 /* MapViewController.m in Sources */,
 				843A77131978670F006988E1 /* FirstViewController.m in Sources */,
 				843A77061978670F006988E1 /* main.m in Sources */,
 			);

@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="294" y="1022"/>
         </scene>
-        <!--View Controller - Locations-->
+        <!--Map View Controller - Locations-->
         <scene sceneID="ipi-id-mKB">
             <objects>
-                <viewController id="zGg-XW-XEQ" sceneMemberID="viewController">
+                <viewController id="zGg-XW-XEQ" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aUt-du-qU2"/>
                         <viewControllerLayoutGuide type="bottom" id="djn-4p-dFQ"/>
@@ -111,9 +111,18 @@
                     <view key="view" contentMode="scaleToFill" id="QNh-z6-iZO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g6D-GI-5Ow">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="521"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Locations" image="locations.png" id="dVX-eB-0u9"/>
+                    <connections>
+                        <outlet property="mapView" destination="g6D-GI-5Ow" id="4gE-Ws-8v8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXW-wd-5ai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
