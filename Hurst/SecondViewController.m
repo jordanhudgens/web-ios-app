@@ -18,6 +18,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSString *urlAddress = @"http://hurstfs.com/inventory.php#inventoryHash";
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [self.inventoryView loadRequest:request];
+    
+    [self.view addSubview:self.inventoryView];
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,7 +9,6 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -19,13 +18,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSString *urlAddress = @"http://hurstfs.com/";
+    NSString *urlAddress = @"http://hurstfs.com";
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    [self.webView loadRequest:request];
+    [self.homepageView loadRequest:request];
     
-    [self.view addSubview:self.webView];
+    [self.view addSubview:self.homepageView];
     
 }
 
