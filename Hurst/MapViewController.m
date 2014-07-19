@@ -27,7 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.mapView.delegate = self;
     // Do any additional setup after loading the view.
+    self.mapView.showsUserLocation = YES;
+    
     
     // Abernathy location setup
     CLLocationCoordinate2D abernathyLocation;
@@ -36,7 +39,7 @@
     MKPointAnnotation *abernathyPoint = [[MKPointAnnotation alloc] init];
     abernathyPoint.coordinate = abernathyLocation;
     abernathyPoint.title = @"HFS - Abernathy";
-    abernathyPoint.subtitle = @"105 Ave D, Abernathy, TX 79311, Phone: (800) 535-8903";
+    abernathyPoint.subtitle = @"105 Ave D, Abernathy, TX 79311";
     
     // Lubbock location setup 33.628161,-101.915645
     CLLocationCoordinate2D lubbockLocation;
@@ -45,7 +48,7 @@
     MKPointAnnotation *lubbockPoint = [[MKPointAnnotation alloc] init];
     lubbockPoint.coordinate = lubbockLocation;
     lubbockPoint.title = @"HFS - Lubbock";
-    lubbockPoint.subtitle = @"4801 Hwy 84, Lubbock, TX 79416, Phone: (800) 873-1427";
+    lubbockPoint.subtitle = @"4801 Hwy 84, Lubbock, TX 79416";
     
     
     // Lorenzo location setup 33.6662865,-101.5285284
@@ -55,7 +58,7 @@
     MKPointAnnotation *lorenzoPoint = [[MKPointAnnotation alloc] init];
     lorenzoPoint.coordinate = lorenzoLocation;
     lorenzoPoint.title = @"HFS - Lorenzo";
-    lorenzoPoint.subtitle = @"Highway 82 East, Lorenzo, TX 79343, Phone: (800) 477-5617";
+    lorenzoPoint.subtitle = @"Highway 82 East, Lorenzo, TX 79343";
     
     // Colorado City location setup 32.41465,-100.860353
     CLLocationCoordinate2D coloradoCityLocation;
@@ -64,7 +67,7 @@
     MKPointAnnotation *coloradoCityPoint = [[MKPointAnnotation alloc] init];
     coloradoCityPoint.coordinate = coloradoCityLocation;
     coloradoCityPoint.title = @"HFS - Colorado City";
-    coloradoCityPoint.subtitle = @"2305 N State Highway 208, Colorado City, TX 79512, Phone: (855) 400-2260";
+    coloradoCityPoint.subtitle = @"2305 N State Highway 208, Colorado City, TX 79512";
     
     // Crosbyton location setup 32.41465,-100.860353
     CLLocationCoordinate2D crosbytonLocation;
@@ -73,7 +76,7 @@
     MKPointAnnotation *crosbytonPoint = [[MKPointAnnotation alloc] init];
     crosbytonPoint.coordinate = crosbytonLocation;
     crosbytonPoint.title = @"HFS - Crosbyton";
-    crosbytonPoint.subtitle = @"2102 E Hwy 82, Crosbyton, TX 79322, Phone: (800) 765.8972";
+    crosbytonPoint.subtitle = @"2102 E Hwy 82, Crosbyton, TX 79322";
     
     // Slaton location setup 33.4489399,-101.6574352
     CLLocationCoordinate2D slatonLocation;
@@ -82,7 +85,7 @@
     MKPointAnnotation *slatonPoint = [[MKPointAnnotation alloc] init];
     slatonPoint.coordinate = slatonLocation;
     slatonPoint.title = @"HFS - Slaton";
-    slatonPoint.subtitle = @"1150 N 20th Street, Slaton, TX 79364, Phone: (800) 999-9851";
+    slatonPoint.subtitle = @"1150 N 20th Street, Slaton, TX 79364";
     
     // Snyder location setup 32.7092618,-100.8885045
     CLLocationCoordinate2D snyderLocation;
@@ -91,7 +94,8 @@
     MKPointAnnotation *snyderPoint = [[MKPointAnnotation alloc] init];
     snyderPoint.coordinate = snyderLocation;
     snyderPoint.title = @"HFS - Snyder";
-    snyderPoint.subtitle = @"507 East Coliseum Drive, Snyder, TX 79549, Phone: (855) 573-3201";
+    snyderPoint.subtitle = @"507 East Coliseum Drive, Snyder, TX 79549";
+    
     
     // Render the locations on the map
     [self.mapView addAnnotation:abernathyPoint];
@@ -101,6 +105,9 @@
     [self.mapView addAnnotation:crosbytonPoint];
     [self.mapView addAnnotation:slatonPoint];
     [self.mapView addAnnotation:snyderPoint];
+    
+    NSArray *annotationArray = self.mapView.annotations;
+    [self.mapView showAnnotations:annotationArray animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,15 +116,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    // if its the user location, just return nil
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    // Try to dequeue an existing pin view first
+    static NSString *AnnotationIdentifier =@"AnnotationIdentifier";
+    MKPinAnnotationView *pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+    pinView.pinColor = MKPinAnnotationColorGreen;
+    pinView.animatesDrop = YES;
+    pinView.canShowCallout = YES;
+    
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    //[rightButton addTarget:self action:@selector(showDV:) forControlEvents:UIControlEventTouchUpInside];
+    pinView.rightCalloutAccessoryView = rightButton;
+    
+    
+    
+    return pinView;
 }
-*/
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    NSString *mapUrl = [NSString stringWithFormat:@"http://maps.apple.com/maps?daddr=%@", view.annotation.subtitle];
+    NSString *urlStringWithoutSpaces;
+    urlStringWithoutSpaces = [mapUrl stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    NSURL *url = [NSURL URLWithString:urlStringWithoutSpaces];
+    [[UIApplication sharedApplication] openURL:url];
+    NSLog(@"%@", mapUrl);
+}
 
 @end
