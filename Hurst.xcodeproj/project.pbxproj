@@ -25,6 +25,8 @@
 		843A77211978670F006988E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A76FD1978670F006988E1 /* UIKit.framework */; };
 		843A77291978670F006988E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843A77271978670F006988E1 /* InfoPlist.strings */; };
 		843A772B1978670F006988E1 /* HurstTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A772A1978670F006988E1 /* HurstTests.m */; };
+		849DFEFC19826D00005287B5 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DFEFB19826D00005287B5 /* ContactViewController.m */; };
+		849DFEFE1982761A005287B5 /* loading_screen_large_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 849DFEFD1982761A005287B5 /* loading_screen_large_iPhone.png */; };
 		84BEECBF19789FBE004DB5ED /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECBD19789FBE004DB5ED /* home.png */; };
 		84BEECC019789FBE004DB5ED /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECBE19789FBE004DB5ED /* home@2x.png */; };
 		84BEECC31978A055004DB5ED /* inventory.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECC11978A055004DB5ED /* inventory.png */; };
@@ -73,6 +75,9 @@
 		843A77261978670F006988E1 /* HurstTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HurstTests-Info.plist"; sourceTree = "<group>"; };
 		843A77281978670F006988E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		843A772A1978670F006988E1 /* HurstTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HurstTests.m; sourceTree = "<group>"; };
+		849DFEFA19826D00005287B5 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		849DFEFB19826D00005287B5 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		849DFEFD1982761A005287B5 /* loading_screen_large_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_screen_large_iPhone.png; path = ../../../../Desktop/loading_screen_large_iPhone.png; sourceTree = "<group>"; };
 		84BEECBD19789FBE004DB5ED /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		84BEECBE19789FBE004DB5ED /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		84BEECC11978A055004DB5ED /* inventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inventory.png; sourceTree = "<group>"; };
@@ -157,6 +162,8 @@
 				843A77001978670F006988E1 /* Supporting Files */,
 				843142F3197AF784006BA074 /* MapViewController.h */,
 				843142F4197AF784006BA074 /* MapViewController.m */,
+				849DFEFA19826D00005287B5 /* ContactViewController.h */,
+				849DFEFB19826D00005287B5 /* ContactViewController.m */,
 			);
 			path = Hurst;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 		84BEECBC19789FAB004DB5ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				849DFEFD1982761A005287B5 /* loading_screen_large_iPhone.png */,
 				84BEECCD1978A2CD004DB5ED /* contact.png */,
 				84BEECCE1978A2CD004DB5ED /* contact@2x.png */,
 				84BEECC51978A2C6004DB5ED /* locations.png */,
@@ -294,6 +302,7 @@
 				843A77041978670F006988E1 /* InfoPlist.strings in Resources */,
 				84BEECC31978A055004DB5ED /* inventory.png in Resources */,
 				84BEECCA1978A2C6004DB5ED /* locations@2x.png in Resources */,
+				849DFEFE1982761A005287B5 /* loading_screen_large_iPhone.png in Resources */,
 				84BEECD01978A2CD004DB5ED /* contact@2x.png in Resources */,
 				84BEECC91978A2C6004DB5ED /* locations.png in Resources */,
 				84BEECC019789FBE004DB5ED /* home@2x.png in Resources */,
@@ -316,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				843A77161978670F006988E1 /* SecondViewController.m in Sources */,
+				849DFEFC19826D00005287B5 /* ContactViewController.m in Sources */,
 				843A770A1978670F006988E1 /* AppDelegate.m in Sources */,
 				843142F5197AF784006BA074 /* MapViewController.m in Sources */,
 				843A77131978670F006988E1 /* FirstViewController.m in Sources */,

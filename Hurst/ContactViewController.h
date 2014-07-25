@@ -1,0 +1,14 @@
+//
+//  ContactViewController.h
+//  Hurst
+//
+//  Created by Jordan Hudgens on 7/25/14.
+//  Copyright (c) 2014 Jordan Hudgens. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ContactViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+
+@end
