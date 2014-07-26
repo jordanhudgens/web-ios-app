@@ -46,6 +46,7 @@
 		84BEECCC1978A2C6004DB5ED /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECC81978A2C6004DB5ED /* news@2x.png */; };
 		84BEECCF1978A2CD004DB5ED /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECCD1978A2CD004DB5ED /* contact.png */; };
 		84BEECD01978A2CD004DB5ED /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECCE1978A2CD004DB5ED /* contact@2x.png */; };
+		84D477CB198351570076F19F /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D477CA198351570076F19F /* NewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		84BEECC81978A2C6004DB5ED /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@2x.png"; sourceTree = "<group>"; };
 		84BEECCD1978A2CD004DB5ED /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
 		84BEECCE1978A2CD004DB5ED /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact@2x.png"; sourceTree = "<group>"; };
+		84D477C9198351570076F19F /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		84D477CA198351570076F19F /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 				843142F4197AF784006BA074 /* MapViewController.m */,
 				849DFEFA19826D00005287B5 /* ContactViewController.h */,
 				849DFEFB19826D00005287B5 /* ContactViewController.m */,
+				84D477C9198351570076F19F /* NewsViewController.h */,
+				84D477CA198351570076F19F /* NewsViewController.m */,
 			);
 			path = Hurst;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				843142F5197AF784006BA074 /* MapViewController.m in Sources */,
 				843A77131978670F006988E1 /* FirstViewController.m in Sources */,
 				843A77061978670F006988E1 /* main.m in Sources */,
+				84D477CB198351570076F19F /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
