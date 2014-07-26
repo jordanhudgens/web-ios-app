@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841875B01983F76000EFB95E /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875A81983F76000EFB95E /* Icon-40.png */; };
+		841875B11983F76000EFB95E /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875A91983F76000EFB95E /* Icon-40@2x.png */; };
+		841875B21983F76000EFB95E /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875AA1983F76000EFB95E /* Icon-60.png */; };
+		841875B31983F76000EFB95E /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875AB1983F76000EFB95E /* Icon-60@2x.png */; };
+		841875B41983F76000EFB95E /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875AC1983F76000EFB95E /* Icon-76.png */; };
+		841875B51983F76000EFB95E /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875AD1983F76000EFB95E /* Icon-76@2x.png */; };
+		841875B61983F76000EFB95E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875AE1983F76000EFB95E /* Icon-Small.png */; };
+		841875B71983F76000EFB95E /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841875AF1983F76000EFB95E /* Icon-Small@2x.png */; };
 		843142F5197AF784006BA074 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843142F4197AF784006BA074 /* MapViewController.m */; };
 		843142F7197AF9A3006BA074 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843142F6197AF9A3006BA074 /* MapKit.framework */; };
 		843A76FA1978670F006988E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A76F91978670F006988E1 /* Foundation.framework */; };
@@ -62,6 +70,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841875A81983F76000EFB95E /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		841875A91983F76000EFB95E /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		841875AA1983F76000EFB95E /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		841875AB1983F76000EFB95E /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		841875AC1983F76000EFB95E /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		841875AD1983F76000EFB95E /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		841875AE1983F76000EFB95E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		841875AF1983F76000EFB95E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		843142F3197AF784006BA074 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		843142F4197AF784006BA074 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		843142F6197AF9A3006BA074 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -253,6 +269,14 @@
 		84BEECBC19789FAB004DB5ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				841875A81983F76000EFB95E /* Icon-40.png */,
+				841875A91983F76000EFB95E /* Icon-40@2x.png */,
+				841875AA1983F76000EFB95E /* Icon-60.png */,
+				841875AB1983F76000EFB95E /* Icon-60@2x.png */,
+				841875AC1983F76000EFB95E /* Icon-76.png */,
+				841875AD1983F76000EFB95E /* Icon-76@2x.png */,
+				841875AE1983F76000EFB95E /* Icon-Small.png */,
+				841875AF1983F76000EFB95E /* Icon-Small@2x.png */,
 				84BEECCD1978A2CD004DB5ED /* contact.png */,
 				84BEECCE1978A2CD004DB5ED /* contact@2x.png */,
 				84BEECC51978A2C6004DB5ED /* locations.png */,
@@ -351,7 +375,10 @@
 				84BEECBF19789FBE004DB5ED /* home.png in Resources */,
 				84BEECCF1978A2CD004DB5ED /* contact.png in Resources */,
 				843A77181978670F006988E1 /* Images.xcassets in Resources */,
+				841875B31983F76000EFB95E /* Icon-60@2x.png in Resources */,
+				841875B11983F76000EFB95E /* Icon-40@2x.png in Resources */,
 				84BEECC41978A055004DB5ED /* inventory@2x.png in Resources */,
+				841875B61983F76000EFB95E /* Icon-Small.png in Resources */,
 				84BEECCC1978A2C6004DB5ED /* news@2x.png in Resources */,
 				843A770D1978670F006988E1 /* Main_iPhone.storyboard in Resources */,
 				843A77041978670F006988E1 /* InfoPlist.strings in Resources */,
@@ -360,6 +387,11 @@
 				84BEECD01978A2CD004DB5ED /* contact@2x.png in Resources */,
 				84BEECC91978A2C6004DB5ED /* locations.png in Resources */,
 				84BEECC019789FBE004DB5ED /* home@2x.png in Resources */,
+				841875B41983F76000EFB95E /* Icon-76.png in Resources */,
+				841875B01983F76000EFB95E /* Icon-40.png in Resources */,
+				841875B51983F76000EFB95E /* Icon-76@2x.png in Resources */,
+				841875B21983F76000EFB95E /* Icon-60.png in Resources */,
+				841875B71983F76000EFB95E /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
