@@ -47,6 +47,8 @@
 		84BEECCF1978A2CD004DB5ED /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECCD1978A2CD004DB5ED /* contact.png */; };
 		84BEECD01978A2CD004DB5ED /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECCE1978A2CD004DB5ED /* contact@2x.png */; };
 		84D477CB198351570076F19F /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D477CA198351570076F19F /* NewsViewController.m */; };
+		84D477CE19835B8B0076F19F /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D477CD19835B8B0076F19F /* ParseTableViewController.m */; };
+		84D477D119835F940076F19F /* ParseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D477D019835F940076F19F /* ParseDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,10 @@
 		84BEECCE1978A2CD004DB5ED /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact@2x.png"; sourceTree = "<group>"; };
 		84D477C9198351570076F19F /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		84D477CA198351570076F19F /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		84D477CC19835B8B0076F19F /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
+		84D477CD19835B8B0076F19F /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
+		84D477CF19835F940076F19F /* ParseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseDetailViewController.h; sourceTree = "<group>"; };
+		84D477D019835F940076F19F /* ParseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,10 @@
 				849DFEFB19826D00005287B5 /* ContactViewController.m */,
 				84D477C9198351570076F19F /* NewsViewController.h */,
 				84D477CA198351570076F19F /* NewsViewController.m */,
+				84D477CC19835B8B0076F19F /* ParseTableViewController.h */,
+				84D477CD19835B8B0076F19F /* ParseTableViewController.m */,
+				84D477CF19835F940076F19F /* ParseDetailViewController.h */,
+				84D477D019835F940076F19F /* ParseDetailViewController.m */,
 			);
 			path = Hurst;
 			sourceTree = "<group>";
@@ -369,12 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				843A77161978670F006988E1 /* SecondViewController.m in Sources */,
+				84D477D119835F940076F19F /* ParseDetailViewController.m in Sources */,
 				849DFEFC19826D00005287B5 /* ContactViewController.m in Sources */,
 				843A770A1978670F006988E1 /* AppDelegate.m in Sources */,
 				843142F5197AF784006BA074 /* MapViewController.m in Sources */,
 				843A77131978670F006988E1 /* FirstViewController.m in Sources */,
 				843A77061978670F006988E1 /* main.m in Sources */,
 				84D477CB198351570076F19F /* NewsViewController.m in Sources */,
+				84D477CE19835B8B0076F19F /* ParseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

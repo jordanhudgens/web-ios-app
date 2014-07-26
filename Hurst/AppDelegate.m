@@ -22,7 +22,6 @@
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
-    NSLog(@"triggered");
     
     return YES;
 }
