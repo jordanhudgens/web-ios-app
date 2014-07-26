@@ -26,7 +26,16 @@
 		843A77291978670F006988E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843A77271978670F006988E1 /* InfoPlist.strings */; };
 		843A772B1978670F006988E1 /* HurstTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A772A1978670F006988E1 /* HurstTests.m */; };
 		849DFEFC19826D00005287B5 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DFEFB19826D00005287B5 /* ContactViewController.m */; };
-		849DFEFE1982761A005287B5 /* loading_screen_large_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 849DFEFD1982761A005287B5 /* loading_screen_large_iPhone.png */; };
+		84A41F82198321CC00A8EB7E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F81198321CC00A8EB7E /* Parse.framework */; };
+		84A41F841983221C00A8EB7E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F831983221C00A8EB7E /* AudioToolbox.framework */; };
+		84A41F861983222600A8EB7E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F851983222600A8EB7E /* CFNetwork.framework */; };
+		84A41F881983223600A8EB7E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F871983223600A8EB7E /* CoreLocation.framework */; };
+		84A41F8A1983224500A8EB7E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F891983224500A8EB7E /* libz.dylib */; };
+		84A41F8C1983225000A8EB7E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F8B1983225000A8EB7E /* MobileCoreServices.framework */; };
+		84A41F8E1983225A00A8EB7E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F8D1983225A00A8EB7E /* QuartzCore.framework */; };
+		84A41F901983226100A8EB7E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F8F1983226100A8EB7E /* Security.framework */; };
+		84A41F921983226A00A8EB7E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F911983226A00A8EB7E /* StoreKit.framework */; };
+		84A41F941983227600A8EB7E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F931983227600A8EB7E /* SystemConfiguration.framework */; };
 		84BEECBF19789FBE004DB5ED /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECBD19789FBE004DB5ED /* home.png */; };
 		84BEECC019789FBE004DB5ED /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECBE19789FBE004DB5ED /* home@2x.png */; };
 		84BEECC31978A055004DB5ED /* inventory.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BEECC11978A055004DB5ED /* inventory.png */; };
@@ -77,7 +86,16 @@
 		843A772A1978670F006988E1 /* HurstTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HurstTests.m; sourceTree = "<group>"; };
 		849DFEFA19826D00005287B5 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
 		849DFEFB19826D00005287B5 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
-		849DFEFD1982761A005287B5 /* loading_screen_large_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_screen_large_iPhone.png; path = ../../../../Desktop/loading_screen_large_iPhone.png; sourceTree = "<group>"; };
+		84A41F81198321CC00A8EB7E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		84A41F831983221C00A8EB7E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		84A41F851983222600A8EB7E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		84A41F871983223600A8EB7E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		84A41F891983224500A8EB7E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		84A41F8B1983225000A8EB7E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		84A41F8D1983225A00A8EB7E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		84A41F8F1983226100A8EB7E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84A41F911983226A00A8EB7E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		84A41F931983227600A8EB7E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		84BEECBD19789FBE004DB5ED /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		84BEECBE19789FBE004DB5ED /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		84BEECC11978A055004DB5ED /* inventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inventory.png; sourceTree = "<group>"; };
@@ -95,10 +113,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843142F7197AF9A3006BA074 /* MapKit.framework in Frameworks */,
+				84A41F941983227600A8EB7E /* SystemConfiguration.framework in Frameworks */,
+				84A41F921983226A00A8EB7E /* StoreKit.framework in Frameworks */,
+				84A41F901983226100A8EB7E /* Security.framework in Frameworks */,
+				84A41F8E1983225A00A8EB7E /* QuartzCore.framework in Frameworks */,
+				84A41F8C1983225000A8EB7E /* MobileCoreServices.framework in Frameworks */,
+				84A41F8A1983224500A8EB7E /* libz.dylib in Frameworks */,
+				84A41F881983223600A8EB7E /* CoreLocation.framework in Frameworks */,
 				843A76FC1978670F006988E1 /* CoreGraphics.framework in Frameworks */,
+				84A41F861983222600A8EB7E /* CFNetwork.framework in Frameworks */,
+				84A41F841983221C00A8EB7E /* AudioToolbox.framework in Frameworks */,
+				843142F7197AF9A3006BA074 /* MapKit.framework in Frameworks */,
 				843A76FE1978670F006988E1 /* UIKit.framework in Frameworks */,
 				843A76FA1978670F006988E1 /* Foundation.framework in Frameworks */,
+				84A41F82198321CC00A8EB7E /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +146,7 @@
 		843A76ED1978670F006988E1 = {
 			isa = PBXGroup;
 			children = (
+				84A41F81198321CC00A8EB7E /* Parse.framework */,
 				843A76FF1978670F006988E1 /* Hurst */,
 				843A77241978670F006988E1 /* HurstTests */,
 				843A76F81978670F006988E1 /* Frameworks */,
@@ -137,6 +166,15 @@
 		843A76F81978670F006988E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A41F931983227600A8EB7E /* SystemConfiguration.framework */,
+				84A41F911983226A00A8EB7E /* StoreKit.framework */,
+				84A41F8F1983226100A8EB7E /* Security.framework */,
+				84A41F8D1983225A00A8EB7E /* QuartzCore.framework */,
+				84A41F8B1983225000A8EB7E /* MobileCoreServices.framework */,
+				84A41F891983224500A8EB7E /* libz.dylib */,
+				84A41F871983223600A8EB7E /* CoreLocation.framework */,
+				84A41F851983222600A8EB7E /* CFNetwork.framework */,
+				84A41F831983221C00A8EB7E /* AudioToolbox.framework */,
 				843142F6197AF9A3006BA074 /* MapKit.framework */,
 				843A76F91978670F006988E1 /* Foundation.framework */,
 				843A76FB1978670F006988E1 /* CoreGraphics.framework */,
@@ -200,7 +238,6 @@
 		84BEECBC19789FAB004DB5ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				849DFEFD1982761A005287B5 /* loading_screen_large_iPhone.png */,
 				84BEECCD1978A2CD004DB5ED /* contact.png */,
 				84BEECCE1978A2CD004DB5ED /* contact@2x.png */,
 				84BEECC51978A2C6004DB5ED /* locations.png */,
@@ -262,6 +299,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jordan Hudgens";
 				TargetAttributes = {
+					843A76F51978670F006988E1 = {
+						DevelopmentTeam = T2A7C22888;
+					};
 					843A771C1978670F006988E1 = {
 						TestTargetID = 843A76F51978670F006988E1;
 					};
@@ -302,7 +342,6 @@
 				843A77041978670F006988E1 /* InfoPlist.strings in Resources */,
 				84BEECC31978A055004DB5ED /* inventory.png in Resources */,
 				84BEECCA1978A2C6004DB5ED /* locations@2x.png in Resources */,
-				849DFEFE1982761A005287B5 /* loading_screen_large_iPhone.png in Resources */,
 				84BEECD01978A2CD004DB5ED /* contact@2x.png in Resources */,
 				84BEECC91978A2C6004DB5ED /* locations.png in Resources */,
 				84BEECC019789FBE004DB5ED /* home@2x.png in Resources */,
@@ -464,10 +503,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hurst/Hurst-Prefix.pch";
 				INFOPLIST_FILE = "Hurst/Hurst-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A53CFBAB-1E4F-4FE3-A6BF-354867472710";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -477,10 +523,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hurst/Hurst-Prefix.pch";
 				INFOPLIST_FILE = "Hurst/Hurst-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A53CFBAB-1E4F-4FE3-A6BF-354867472710";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
