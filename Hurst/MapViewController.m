@@ -71,8 +71,8 @@
     
     // Crosbyton location setup 32.41465,-100.860353
     CLLocationCoordinate2D crosbytonLocation;
-    crosbytonLocation.latitude = 32.41465;
-    crosbytonLocation.longitude = -100.860353;
+    crosbytonLocation.latitude = 33.657677;
+    crosbytonLocation.longitude = -101.223342;
     MKPointAnnotation *crosbytonPoint = [[MKPointAnnotation alloc] init];
     crosbytonPoint.coordinate = crosbytonLocation;
     crosbytonPoint.title = @"HFS - Crosbyton";
