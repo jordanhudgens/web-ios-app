@@ -7,8 +7,11 @@
 //
 
 #import "FirstViewController.h"
+#import "NetworkCheckHelper.h"
 
 @interface FirstViewController ()
+
+@property (nonatomic, strong) NetworkCheckHelper *connected;
 
 @end
 
@@ -25,6 +28,12 @@
     [self.homepageView loadRequest:request];
     
     [self.view addSubview:self.homepageView];
+    
+    if (![self connected]) {
+        NSLog(@"Uh oh, no internet");
+    } else {
+        NSLog(@"You're connected brah");
+    }
     
 }
 

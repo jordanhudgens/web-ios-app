@@ -25,6 +25,8 @@
 		843A77211978670F006988E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A76FD1978670F006988E1 /* UIKit.framework */; };
 		843A77291978670F006988E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843A77271978670F006988E1 /* InfoPlist.strings */; };
 		843A772B1978670F006988E1 /* HurstTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A772A1978670F006988E1 /* HurstTests.m */; };
+		845B1977199601DC0050AA62 /* NetworkCheckHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B1976199601DC0050AA62 /* NetworkCheckHelper.m */; };
+		845B197A199602AE0050AA62 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B1979199602AE0050AA62 /* Reachability.m */; };
 		849DFEFC19826D00005287B5 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DFEFB19826D00005287B5 /* ContactViewController.m */; };
 		84A41F82198321CC00A8EB7E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F81198321CC00A8EB7E /* Parse.framework */; };
 		84A41F841983221C00A8EB7E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A41F831983221C00A8EB7E /* AudioToolbox.framework */; };
@@ -95,6 +97,10 @@
 		843A77261978670F006988E1 /* HurstTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HurstTests-Info.plist"; sourceTree = "<group>"; };
 		843A77281978670F006988E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		843A772A1978670F006988E1 /* HurstTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HurstTests.m; sourceTree = "<group>"; };
+		845B1975199601DC0050AA62 /* NetworkCheckHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCheckHelper.h; sourceTree = "<group>"; };
+		845B1976199601DC0050AA62 /* NetworkCheckHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCheckHelper.m; sourceTree = "<group>"; };
+		845B1978199602AE0050AA62 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		845B1979199602AE0050AA62 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		849DFEFA19826D00005287B5 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
 		849DFEFB19826D00005287B5 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		84A41F81198321CC00A8EB7E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 		843A76FF1978670F006988E1 /* Hurst */ = {
 			isa = PBXGroup;
 			children = (
+				845B1978199602AE0050AA62 /* Reachability.h */,
+				845B1979199602AE0050AA62 /* Reachability.m */,
 				84BEECBC19789FAB004DB5ED /* Images */,
 				843A77081978670F006988E1 /* AppDelegate.h */,
 				843A77091978670F006988E1 /* AppDelegate.m */,
@@ -233,6 +241,8 @@
 				84D477CD19835B8B0076F19F /* ParseTableViewController.m */,
 				84D477CF19835F940076F19F /* ParseDetailViewController.h */,
 				84D477D019835F940076F19F /* ParseDetailViewController.m */,
+				845B1975199601DC0050AA62 /* NetworkCheckHelper.h */,
+				845B1976199601DC0050AA62 /* NetworkCheckHelper.m */,
 			);
 			path = Hurst;
 			sourceTree = "<group>";
@@ -413,8 +423,10 @@
 				843A77161978670F006988E1 /* SecondViewController.m in Sources */,
 				84D477D119835F940076F19F /* ParseDetailViewController.m in Sources */,
 				849DFEFC19826D00005287B5 /* ContactViewController.m in Sources */,
+				845B197A199602AE0050AA62 /* Reachability.m in Sources */,
 				843A770A1978670F006988E1 /* AppDelegate.m in Sources */,
 				843142F5197AF784006BA074 /* MapViewController.m in Sources */,
+				845B1977199601DC0050AA62 /* NetworkCheckHelper.m in Sources */,
 				843A77131978670F006988E1 /* FirstViewController.m in Sources */,
 				843A77061978670F006988E1 /* main.m in Sources */,
 				84D477CB198351570076F19F /* NewsViewController.m in Sources */,

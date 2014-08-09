@@ -7,8 +7,11 @@
 //
 
 #import "SecondViewController.h"
+#import "NetworkCheckHelper.h"
 
 @interface SecondViewController ()
+
+@property (nonatomic, strong) NetworkCheckHelper *connected;
 
 @end
 
@@ -25,6 +28,12 @@
     [self.inventoryView loadRequest:request];
     
     [self.view addSubview:self.inventoryView];
+    
+    if (![self connected]) {
+        NSLog(@"View 2: Uh oh, no internet");
+    } else {
+        NSLog(@"View 2: You're connected brah");
+    }
 }
 
 - (void)didReceiveMemoryWarning
