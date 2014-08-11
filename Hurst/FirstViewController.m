@@ -11,7 +11,7 @@
 
 @interface FirstViewController ()
 
-@property (nonatomic, strong) NetworkCheckHelper *connected;
+@property (nonatomic, strong) NetworkCheckHelper *checker;
 
 @end
 
@@ -29,12 +29,18 @@
     
     [self.view addSubview:self.homepageView];
     
-    if (![self connected]) {
+    self.checker = [[NetworkCheckHelper alloc] init];
+    
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (![self.checker connected]) {
         NSLog(@"Uh oh, no internet");
     } else {
         NSLog(@"You're connected brah");
     }
-    
 }
 
 - (void)didReceiveMemoryWarning
