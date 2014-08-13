@@ -12,6 +12,7 @@
 @interface FirstViewController ()
 
 @property (nonatomic, strong) NetworkCheckHelper *checker;
+@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end
 
@@ -20,7 +21,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
     NSString *urlAddress = @"http://hurstfs.com";
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -31,15 +35,10 @@
     
     self.checker = [[NetworkCheckHelper alloc] init];
     
-    
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated {
     if (![self.checker connected]) {
-        NSLog(@"Uh oh, no internet");
+        self.statusLabel.text = @"";
     } else {
-        NSLog(@"You're connected brah");
+        self.statusLabel.text = @"This page requires an Internet connection";
     }
 }
 
