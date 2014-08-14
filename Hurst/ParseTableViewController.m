@@ -8,6 +8,7 @@
 
 #import "ParseTableViewController.h"
 #import "ParseDetailViewController.h"
+#import "NetworkCheckHelper.h"
 
 @interface ParseTableViewController () {
     NSXMLParser *parser;
@@ -18,34 +19,23 @@
     NSString *element;
 }
 
+@property (nonatomic, strong) NetworkCheckHelper *checker;
+
 @end
 
 @implementation ParseTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    UIActivityIndicatorView  *av = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    av.frame=CGRectMake(145, 160, 25, 25);
-    av.tag  = 1;
-    [self.view addSubview:av];
-    [av startAnimating];
-    
+    if ([self.checker connected]) {
+        self.navigationItem.title = @"Not available in offline mode";
+    } else {
+        self.navigationItem.title = @"News";
+    }
     
     feeds = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:@"http://hurst.jordanhudgens.com/?feed=rss"];
