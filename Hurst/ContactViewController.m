@@ -7,33 +7,50 @@
 //
 
 #import "ContactViewController.h"
+#import "NetworkCheckHelper.h"
 
 @interface ContactViewController ()
+
+@property (nonatomic, strong) NetworkCheckHelper *checker;
+@property (strong, nonatomic) IBOutlet UIImageView *offlineImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *offlineImage;
+@property (strong, nonatomic) IBOutlet UITextView *offlineTextView;
 
 @end
 
 @implementation ContactViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     
-    NSString *urlAddress = @"http://hurstfs.com/contact.php#contactUs";
-    NSURL *url = [NSURL URLWithString:urlAddress];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    self.checker = [[NetworkCheckHelper alloc] init];
     
-    [self.webView loadRequest:request];
+    if ([self.checker connected]) {
+        NSString *urlAddress = @"http://hurstfs.com/contact.php#contactUs";
+        NSURL *url = [NSURL URLWithString:urlAddress];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        [self.webView loadRequest:request];
+        
+        [self.view addSubview:self.webView];
+        
+        self.offlineTextView.text = @"";
+        self.offlineImage.image = nil;
+        NSLog(@"Connection looks good from here");
+    } else {
+        self.offlineTextView.editable = NO;
+        self.offlineTextView.dataDetectorTypes = UIDataDetectorTypeAll;
+        NSLog(@"No connection");
+    }
     
-    [self.view addSubview:self.webView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSURLConnection cancelPreviousPerformRequestsWithTarget:self];
 }
 
 - (void)didReceiveMemoryWarning

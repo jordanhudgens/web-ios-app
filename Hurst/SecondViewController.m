@@ -11,7 +11,9 @@
 
 @interface SecondViewController ()
 
-@property (nonatomic, strong) NetworkCheckHelper *connected;
+@property (nonatomic, strong) NetworkCheckHelper *checker;
+@property (strong, nonatomic) IBOutlet UIImageView *offlineImage;
+@property (strong, nonatomic) IBOutlet UITextView *offlineTextView;
 
 @end
 
@@ -20,20 +22,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSString *urlAddress = @"http://hurstfs.com/inventory.php#inventoryHash";
-    NSURL *url = [NSURL URLWithString:urlAddress];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
     
-    [self.inventoryView loadRequest:request];
+    self.checker = [[NetworkCheckHelper alloc] init];
     
-    [self.view addSubview:self.inventoryView];
-    
-    if (![self connected]) {
-        NSLog(@"View 2: Uh oh, no internet");
+    if ([self.checker connected]) {
+        NSString *urlAddress = @"http://hurstfs.com/inventory.php#inventoryHash";
+        NSURL *url = [NSURL URLWithString:urlAddress];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        [self.inventoryView loadRequest:request];
+        
+        [self.view addSubview:self.inventoryView];
+        
+        self.offlineTextView.text = @"";
+        self.offlineImage.image = nil;
+        NSLog(@"Connection looks good from here");
     } else {
-        NSLog(@"View 2: You're connected brah");
+        self.offlineTextView.editable = NO;
+        self.offlineTextView.dataDetectorTypes = UIDataDetectorTypeAll;
+        NSLog(@"No connection");
     }
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSURLConnection cancelPreviousPerformRequestsWithTarget:self];
 }
 
 - (void)didReceiveMemoryWarning
