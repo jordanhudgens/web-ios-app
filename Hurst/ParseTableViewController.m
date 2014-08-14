@@ -39,12 +39,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIActivityIndicatorView  *av = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    av.frame=CGRectMake(145, 160, 25, 25);
+    av.tag  = 1;
+    [self.view addSubview:av];
+    [av startAnimating];
+    
+    
     feeds = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:@"http://hurst.jordanhudgens.com/?feed=rss"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
+    
+    UIActivityIndicatorView *tmpimg = (UIActivityIndicatorView *)[self.view viewWithTag:1];
+    [tmpimg removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning

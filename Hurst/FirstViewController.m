@@ -12,7 +12,8 @@
 @interface FirstViewController ()
 
 @property (nonatomic, strong) NetworkCheckHelper *checker;
-@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *offlineImage;
+@property (strong, nonatomic) IBOutlet UITextView *offlineTextView;
 
 @end
 
@@ -21,25 +22,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    
-    NSString *urlAddress = @"http://hurstfs.com";
-    NSURL *url = [NSURL URLWithString:urlAddress];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [self.homepageView loadRequest:request];
-    
-    [self.view addSubview:self.homepageView];
-    
+
     self.checker = [[NetworkCheckHelper alloc] init];
     
-    if (![self.checker connected]) {
-        self.statusLabel.text = @"";
+    if ([self.checker connected]) {
+        NSString *urlAddress = @"http://hurstfs.com";
+        NSURL *url = [NSURL URLWithString:urlAddress];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        [self.homepageView loadRequest:request];
+        
+        [self.view addSubview:self.homepageView];
+        
+        self.offlineTextView.text = @"";
+        self.offlineImage.image = nil;
+        NSLog(@"Connection looks good from here");
     } else {
-        self.statusLabel.text = @"This page requires an Internet connection";
+        self.offlineTextView.editable = NO;
+        self.offlineTextView.dataDetectorTypes = UIDataDetectorTypeAll;
+        NSLog(@"No connection");
     }
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSURLConnection cancelPreviousPerformRequestsWithTarget:self];
 }
 
 - (void)didReceiveMemoryWarning
