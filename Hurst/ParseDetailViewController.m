@@ -14,18 +14,13 @@
 
 @implementation ParseDetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.webView reload];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
     
     NSString *stringURL = self.url;
     stringURL = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -34,8 +29,9 @@
     
     NSURL *myURL = [NSURL URLWithString:cleanedString];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
-
+    
     [self.webView loadRequest:request];
+    [self.webView reload];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +43,10 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"Error : %@",error);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSURLConnection cancelPreviousPerformRequestsWithTarget:self];
 }
 
 @end

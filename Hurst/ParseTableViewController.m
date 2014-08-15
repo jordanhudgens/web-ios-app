@@ -30,22 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tableView reloadData];
     
-    if ([self.checker connected]) {
-        self.navigationItem.title = @"Not available in offline mode";
-    } else {
-        self.navigationItem.title = @"News";
-    }
-    
-    feeds = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:@"http://hurst.jordanhudgens.com/?feed=rss"];
-    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-    [parser setDelegate:self];
-    [parser setShouldResolveExternalEntities:NO];
-    [parser parse];
-    
-    UIActivityIndicatorView *tmpimg = (UIActivityIndicatorView *)[self.view viewWithTag:1];
-    [tmpimg removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,6 +108,37 @@
     }
     
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if ([self.checker connected]) {
+        self.navigationItem.title = @"Not available in offline mode";
+    } else {
+        self.navigationItem.title = @"News";
+    }
+    
+    feeds = [[NSMutableArray alloc] init];
+    NSURL *url = [NSURL URLWithString:@"http://hurst.jordanhudgens.com/?feed=rss"];
+    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+    [parser setDelegate:self];
+    [parser setShouldResolveExternalEntities:NO];
+    [parser parse];
+    
+    UIActivityIndicatorView *tmpimg = (UIActivityIndicatorView *)[self.view viewWithTag:1];
+    [tmpimg removeFromSuperview];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSURLConnection cancelPreviousPerformRequestsWithTarget:self.navigationController];
+    NSLog(@"View will disappear");
+    feeds = nil;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [NSURLConnection cancelPreviousPerformRequestsWithTarget:self.navigationController];
+    NSLog(@"View did disappear");
+    feeds = nil;
 }
 
 @end
