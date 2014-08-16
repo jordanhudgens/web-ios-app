@@ -20,7 +20,8 @@
     [self.webView reload];
 }
 
--(void)viewDidAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:NO];
     
     NSString *stringURL = self.url;
     stringURL = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -34,6 +35,20 @@
     [self.webView reload];
 }
 
+//-(void)viewDidAppear:(BOOL)animated {
+//    
+//    NSString *stringURL = self.url;
+//    stringURL = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    
+//    NSString *cleanedString = [stringURL stringByReplacingOccurrencesOfString:@"/%0A%09%09" withString:@""];
+//    
+//    NSURL *myURL = [NSURL URLWithString:cleanedString];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
+//    
+//    [self.webView loadRequest:request];
+//    [self.webView reload];
+//}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -46,7 +61,8 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [NSURLConnection cancelPreviousPerformRequestsWithTarget:self];
+    [self.view removeFromSuperview];
+    NSLog(@"View should be removed");
 }
 
 @end

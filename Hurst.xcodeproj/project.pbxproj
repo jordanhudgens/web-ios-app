@@ -599,7 +599,7 @@
 				GCC_PREFIX_HEADER = "Hurst/Hurst-Prefix.pch";
 				INFOPLIST_FILE = "Hurst/Hurst-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A53CFBAB-1E4F-4FE3-A6BF-354867472710";
+				PROVISIONING_PROFILE = "f146f8f6-33a5-4b86-9c49-d18fdd97da40";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

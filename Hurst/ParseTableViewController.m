@@ -132,6 +132,7 @@
     [NSURLConnection cancelPreviousPerformRequestsWithTarget:self.navigationController];
     NSLog(@"View will disappear");
     feeds = nil;
+    [self.view removeFromSuperview];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -139,6 +140,9 @@
     [NSURLConnection cancelPreviousPerformRequestsWithTarget:self.navigationController];
     NSLog(@"View did disappear");
     feeds = nil;
+    [self.view removeFromSuperview];
 }
+
+
 
 @end
