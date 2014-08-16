@@ -527,7 +527,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -559,7 +559,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -599,7 +599,7 @@
 				GCC_PREFIX_HEADER = "Hurst/Hurst-Prefix.pch";
 				INFOPLIST_FILE = "Hurst/Hurst-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f146f8f6-33a5-4b86-9c49-d18fdd97da40";
+				PROVISIONING_PROFILE = "2f44a3f8-d357-435e-9c4d-03b229fd2f61";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
