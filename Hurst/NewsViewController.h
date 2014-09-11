@@ -11,4 +11,6 @@
 @interface NewsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
+@property (assign, nonatomic) BOOL isLoading;
+
 @end

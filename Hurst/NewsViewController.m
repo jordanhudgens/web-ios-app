@@ -27,10 +27,20 @@
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
+    
+    
     [self.webView loadRequest:request];
     
     [self.view addSubview:self.webView];
+    
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    spinner.center = CGPointMake(160, 240);
+    spinner.hidesWhenStopped = YES;
+    [self.view addSubview:spinner];
+    [spinner startAnimating];
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
