@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
+        <!--First-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
                 <viewController storyboardIdentifier="fvc" title="First" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CZ4-MO-1fc" customClass="FirstViewController" sceneMemberID="viewController">
@@ -23,11 +23,9 @@
                             </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hurst_offline.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="j4L-5W-AZT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It appears you are offline, the home screen requires an internet connection. Please feel free to call us: 806-634-0000" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="df1-5i-iXG">
                                 <rect key="frame" x="48" y="265" width="224" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -46,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="1170" y="-621"/>
         </scene>
-        <!--Second View Controller - Second-->
+        <!--Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
                 <viewController storyboardIdentifier="svc" title="Second" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QUy-BD-bpt" customClass="SecondViewController" sceneMemberID="viewController">
@@ -64,11 +62,9 @@
                             </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hurst_offline.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2t-yt-pdY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It appears you are offline, the inventory screen requires an internet connection. Please feel free to call us: 806-634-0000" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Irq-u4-abO">
                                 <rect key="frame" x="52" y="259" width="217" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -87,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="1170" y="28"/>
         </scene>
-        <!--Contact View Controller - Contact-->
+        <!--Contact-->
         <scene sceneID="Kk2-ii-N53">
             <objects>
                 <viewController storyboardIdentifier="cvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DYa-Qp-Ds9" customClass="ContactViewController" sceneMemberID="viewController">
@@ -105,11 +101,9 @@
                             </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hurst_offline.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pWQ-by-NPY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It appears you are offline, the contact screen requires an internet connection. Please feel free to call us: 806-634-0000" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9MP-YY-OxH">
                                 <rect key="frame" x="52" y="270" width="216" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -129,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="-134" y="1022"/>
         </scene>
-        <!--Map View Controller - Locations-->
+        <!--Locations-->
         <scene sceneID="ipi-id-mKB">
             <objects>
                 <viewController storyboardIdentifier="mvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zGg-XW-XEQ" customClass="MapViewController" sceneMemberID="viewController">
@@ -156,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="666" y="726"/>
         </scene>
-        <!--Parse Table View Controller - News-->
+        <!--News-->
         <scene sceneID="pKY-as-2Wj">
             <objects>
                 <tableViewController storyboardIdentifier="ptvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0xO-y2-SBf" customClass="ParseTableViewController" sceneMemberID="viewController">
@@ -164,6 +158,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="7pS-tc-fym">
+                            <rect key="frame" x="0.0" y="130" width="320" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="SQy-u8-aZE">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -184,6 +183,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="h7O-wN-ueu"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="7pS-tc-fym" id="v0r-bC-TRS"/>
                         <outlet property="tableView" destination="Chj-cg-Rfh" id="nML-BC-Gcb"/>
                     </connections>
                 </tableViewController>
@@ -207,11 +207,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-Zq-vEN">
+                                <rect key="frame" x="150" y="274" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="q3T-Go-SkG"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Qtv-Zq-vEN" id="mdW-IB-wZt"/>
                         <outlet property="webView" destination="MOa-Lh-6qo" id="M6I-5h-a3t"/>
                     </connections>
                 </viewController>
@@ -241,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="-701" y="282"/>
         </scene>
-        <!--Navigation Controller - News-->
+        <!--News-->
         <scene sceneID="DLK-Jl-6gO">
             <objects>
                 <navigationController storyboardIdentifier="nvc" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eiK-40-lvO" sceneMemberID="viewController">
@@ -269,10 +274,10 @@
         <image name="locations.png" width="30" height="30"/>
         <image name="news.png" width="30" height="30"/>
     </resources>
-    <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
 </document>

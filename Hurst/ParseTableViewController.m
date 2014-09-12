@@ -20,6 +20,7 @@
 }
 
 @property (nonatomic, strong) NetworkCheckHelper *checker;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -96,6 +97,7 @@
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     
     [self.tableView reloadData];
+    [self.activityIndicator stopAnimating];
     
 }
 
@@ -118,6 +120,8 @@
     }
     
     feeds = [[NSMutableArray alloc] init];
+    
+    [self.activityIndicator startAnimating];
     NSURL *url = [NSURL URLWithString:@"http://hurst.jordanhudgens.com/?feed=rss"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
     [parser setDelegate:self];

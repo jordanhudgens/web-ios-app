@@ -8,7 +8,9 @@
 
 #import "ParseDetailViewController.h"
 
-@interface ParseDetailViewController ()
+@interface ParseDetailViewController () <UIWebViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -17,6 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.activityIndicator startAnimating];
+    
+    self.webView.delegate = self;
     [self.webView reload];
 }
 
@@ -31,15 +37,24 @@
     NSURL *myURL = [NSURL URLWithString:cleanedString];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     
+
+    
     [self.webView loadRequest:request];
     [self.webView reload];
+    
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
+    [self.activityIndicator stopAnimating];
+    
 }
 
 //-(void)viewDidAppear:(BOOL)animated {
 //    
 //    NSString *stringURL = self.url;
 //    stringURL = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    
+//
 //    NSString *cleanedString = [stringURL stringByReplacingOccurrencesOfString:@"/%0A%09%09" withString:@""];
 //    
 //    NSURL *myURL = [NSURL URLWithString:cleanedString];
