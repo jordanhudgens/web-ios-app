@@ -25,6 +25,7 @@
 		843A77211978670F006988E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A76FD1978670F006988E1 /* UIKit.framework */; };
 		843A77291978670F006988E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843A77271978670F006988E1 /* InfoPlist.strings */; };
 		843A772B1978670F006988E1 /* HurstTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A772A1978670F006988E1 /* HurstTests.m */; };
+		844F0D0719C50789003E5994 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0D0619C50789003E5994 /* MBProgressHUD.m */; };
 		845B1977199601DC0050AA62 /* NetworkCheckHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B1976199601DC0050AA62 /* NetworkCheckHelper.m */; };
 		845B197A199602AE0050AA62 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B1979199602AE0050AA62 /* Reachability.m */; };
 		849DFEFC19826D00005287B5 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DFEFB19826D00005287B5 /* ContactViewController.m */; };
@@ -98,6 +99,8 @@
 		843A77261978670F006988E1 /* HurstTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HurstTests-Info.plist"; sourceTree = "<group>"; };
 		843A77281978670F006988E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		843A772A1978670F006988E1 /* HurstTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HurstTests.m; sourceTree = "<group>"; };
+		844F0D0519C50789003E5994 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		844F0D0619C50789003E5994 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		845B1975199601DC0050AA62 /* NetworkCheckHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCheckHelper.h; sourceTree = "<group>"; };
 		845B1976199601DC0050AA62 /* NetworkCheckHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCheckHelper.m; sourceTree = "<group>"; };
 		845B1978199602AE0050AA62 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 		843A76FF1978670F006988E1 /* Hurst */ = {
 			isa = PBXGroup;
 			children = (
+				844F0D0519C50789003E5994 /* MBProgressHUD.h */,
+				844F0D0619C50789003E5994 /* MBProgressHUD.m */,
 				845B1978199602AE0050AA62 /* Reachability.h */,
 				845B1979199602AE0050AA62 /* Reachability.m */,
 				84BEECBC19789FAB004DB5ED /* Images */,
@@ -432,6 +437,7 @@
 				843142F5197AF784006BA074 /* MapViewController.m in Sources */,
 				845B1977199601DC0050AA62 /* NetworkCheckHelper.m in Sources */,
 				843A77131978670F006988E1 /* FirstViewController.m in Sources */,
+				844F0D0719C50789003E5994 /* MBProgressHUD.m in Sources */,
 				843A77061978670F006988E1 /* main.m in Sources */,
 				84D477CB198351570076F19F /* NewsViewController.m in Sources */,
 				84D477CE19835B8B0076F19F /* ParseTableViewController.m in Sources */,

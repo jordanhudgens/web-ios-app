@@ -7,10 +7,10 @@
 //
 
 #import "ParseDetailViewController.h"
+#import "MBProgressHUD.h"
 
 @interface ParseDetailViewController () <UIWebViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -20,49 +20,31 @@
 {
     [super viewDidLoad];
     
-    [self.activityIndicator startAnimating];
+    
     
     self.webView.delegate = self;
+    
+    [MBProgressHUD showHUDAddedTo:self.webView animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
+        NSString *stringURL = self.url;
+        stringURL = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *cleanedString = [stringURL stringByReplacingOccurrencesOfString:@"/%0A%09%09" withString:@""];
+        NSURL *myURL = [NSURL URLWithString:cleanedString];
+        NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
+        [self.webView loadRequest:request];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.webView animated:YES];
+        });
+    });
+    
     [self.webView reload];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:NO];
-    
-    NSString *stringURL = self.url;
-    stringURL = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    NSString *cleanedString = [stringURL stringByReplacingOccurrencesOfString:@"/%0A%09%09" withString:@""];
-    
-    NSURL *myURL = [NSURL URLWithString:cleanedString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
-    
 
-    
-    [self.webView loadRequest:request];
-    [self.webView reload];
-    
-}
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    
-    [self.activityIndicator stopAnimating];
-    
-}
-
-//-(void)viewDidAppear:(BOOL)animated {
-//    
-//    NSString *stringURL = self.url;
-//    stringURL = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//
-//    NSString *cleanedString = [stringURL stringByReplacingOccurrencesOfString:@"/%0A%09%09" withString:@""];
-//    
-//    NSURL *myURL = [NSURL URLWithString:cleanedString];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
-//    
-//    [self.webView loadRequest:request];
-//    [self.webView reload];
-//}
 
 - (void)didReceiveMemoryWarning
 {

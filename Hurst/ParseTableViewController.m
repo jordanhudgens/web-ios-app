@@ -9,6 +9,7 @@
 #import "ParseTableViewController.h"
 #import "ParseDetailViewController.h"
 #import "NetworkCheckHelper.h"
+#import "MBProgressHUD.h"
 
 @interface ParseTableViewController () {
     NSXMLParser *parser;
@@ -121,15 +122,22 @@
     
     feeds = [[NSMutableArray alloc] init];
     
-    [self.activityIndicator startAnimating];
-    NSURL *url = [NSURL URLWithString:@"http://hurst.jordanhudgens.com/?feed=rss"];
-    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-    [parser setDelegate:self];
-    [parser setShouldResolveExternalEntities:NO];
-    [parser parse];
     
-    UIActivityIndicatorView *tmpimg = (UIActivityIndicatorView *)[self.view viewWithTag:1];
-    [tmpimg removeFromSuperview];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        NSURL *url = [NSURL URLWithString:@"http://hurst.jordanhudgens.com/?feed=rss"];
+        parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+        [parser setDelegate:self];
+        [parser setShouldResolveExternalEntities:NO];
+        [parser parse];
+        
+        NSLog(@"This is hitting");
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

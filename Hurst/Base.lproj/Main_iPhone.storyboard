@@ -158,11 +158,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="7pS-tc-fym">
-                            <rect key="frame" x="0.0" y="130" width="320" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="color" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="SQy-u8-aZE">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -183,7 +178,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="h7O-wN-ueu"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="7pS-tc-fym" id="v0r-bC-TRS"/>
                         <outlet property="tableView" destination="Chj-cg-Rfh" id="nML-BC-Gcb"/>
                     </connections>
                 </tableViewController>
@@ -207,16 +201,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-Zq-vEN">
-                                <rect key="frame" x="150" y="274" width="37" height="37"/>
-                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="q3T-Go-SkG"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="Qtv-Zq-vEN" id="mdW-IB-wZt"/>
                         <outlet property="webView" destination="MOa-Lh-6qo" id="M6I-5h-a3t"/>
                     </connections>
                 </viewController>
