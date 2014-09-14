@@ -23,6 +23,9 @@
     // Override point for customization after application launch.
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.188 green:0.471 blue:0.012 alpha:1]];
     
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     // Parse shennanigans for push notifications
     [Parse setApplicationId:@"uv07JGkxqqZSjAlPI41yCBjV9AAS3HYXi98FYcFq"
                   clientKey:@"792mEhyJSKm3z4t1XfxFBU2W7c70crViPm6K8ZkD"];
@@ -35,6 +38,8 @@
     {
         [self application:application didReceiveRemoteNotification:pushDict];
     }
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
     return YES;
 }

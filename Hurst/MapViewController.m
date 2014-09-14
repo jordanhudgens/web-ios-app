@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 
+
 @interface MapViewController ()
 
 @end
@@ -28,7 +29,7 @@
 {
     [super viewDidLoad];
     self.mapView.delegate = self;
-    // Do any additional setup after loading the view.
+
     self.mapView.showsUserLocation = YES;
     
     
